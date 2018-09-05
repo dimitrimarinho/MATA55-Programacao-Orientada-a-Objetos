@@ -35,11 +35,11 @@ public class Filme
         this.anoLancamento = newAnoLancamento;
         this.qtdCopias = newQtdCopias;
     }  
-    public void Locar(int qtdCopias)
+    public void locar(int qtdCopias)
     {
         qtdCopias--;
     }
-    public void Devolver(int qtdCopias)
+    public void devolver(int qtdCopias)
     {
         qtdCopias++;
     }
