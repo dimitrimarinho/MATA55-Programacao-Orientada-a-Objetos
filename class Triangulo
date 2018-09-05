@@ -1,0 +1,36 @@
+
+/**
+ * Exercício:   Criar uma classe triângulo
+ * 
+ * Atributos: lado1, lado2, lado3 
+ * Método: isEquilateral
+ */
+public class Triangulo
+{
+    // Variáveis de instância
+    private int lado1;
+    private int lado2;
+    private int lado3;
+
+    /**
+     * Construtor para objetos da classe Triangulo
+     */
+    public Triangulo(int newLado1, int newLado2, int newLado3)
+    {
+        // Inicializa variáveis de instância
+        this.lado1 = newLado1;
+        this.lado2 = newLado2;
+        this.lado3 = newLado3;
+    }
+
+    /**
+     * 
+     */
+    public boolean isEquilateral()
+    {
+        if (lado1 == lado2 && lado1 == lado3 && lado3 == lado2)
+            return true;
+        else
+            return false;        
+    }
+}
