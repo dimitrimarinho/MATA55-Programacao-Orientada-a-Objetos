@@ -10,6 +10,7 @@ Métodos: éEquilatero()
 
 Código no BlueJ: Triangulo.class
 
+
 /**
  * Exercício:   Criar uma classe triângulo
  * 
@@ -19,14 +20,11 @@ Código no BlueJ: Triangulo.class
 public class Triangulo
 {
     // Variáveis de instância
-    private int lado1;
-    private int lado2;
-    private int lado3;
-
+    private double lado1, lado2, lado3;
     /**
      * Construtor para objetos da classe Triangulo
      */
-    public Triangulo(int newLado1, int newLado2, int newLado3)
+    public Triangulo(double newLado1, double newLado2, double newLado3)
     {
         // Inicializa variáveis de instância
         this.lado1 = newLado1;
