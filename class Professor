@@ -1,0 +1,30 @@
+
+/**
+ * 
+ */
+import java.util.Date;
+import java.util.Calendar;
+public class Professor
+{
+    // variáveis de instância
+    private String nome;
+    private String depto;
+    private Date dataAdmissao;
+
+    /**
+     * Construtor para objetos da classe Universidade
+     */
+    public Professor(String nome, String depto, String dataAdmissao)
+    {
+        // inicializa variáveis de instância
+        this.nome = nome;
+        this.depto = depto;
+        this.dataAdmissao = dataAdmissao;
+    }
+    public Professor(String nome, String depto)
+    {
+        // inicializa variáveis de instância
+        this.nome = nome;
+        this.depto = depto;
+        Date data = new Date() ;
+    }
