@@ -1,0 +1,119 @@
+
+public class ContaCorrente
+{
+	private int numeroConta, digitosVerificadores,numeroAgencia, grauConta, saldo, limiteConta;
+	private boolean statusConta;	
+}
+public class ContaCorrente(int numeroConta, int numeroAgencia, int grauConta, int limiteConta, int depositoInicial)
+{
+	this.numeroConta = numeroConta;
+	this.numeroAgencia = numeroAgencia;
+	this.grauConta = grauConta;
+	this.limiteConta = limiteConta;
+	this.saldo = 0;
+	switch(grauConta)
+	{
+		case 0:
+			if(limiteConta = 0 && depositoInicial > 100)
+			{
+				statusConta = true;
+			}
+			else
+			{
+				if(limiteConta != 0)
+				{
+					if(depositoInicial <= 100)
+					{
+						 System.out.println(“O limite da Conta e o depósito inicial não são válidos para esse grau de Conta”);
+					}
+					else if(depositoInicial > 100)
+					{
+						System.out.println(“O limite da Conta não é válido para esse grau de Conta”);
+					}
+				}
+				else if(depositoInicial <= 100)
+				{
+					System.out.println(“O depósito inicial não é válido para esse grau de Conta”);
+				}
+				statusConta = false;
+			}
+		break;
+		case 1:
+			if(limiteConta >= 0 && depositoInicial >= 200)
+			{
+				statusConta = true;
+			}
+			else
+			{
+				if(limiteConta < 0)
+				{
+					if(depositoInicial < 200)
+					{
+						 System.out.println(“O limite da Conta e o depósito inicial não são válidos para esse grau de Conta”);
+					}
+					else if(depositoInicial >= 200)
+					{
+						System.out.println(“O limite da Conta não é válido para esse grau de Conta”);
+					}
+				}
+				else if(depositoInicial < 200)
+				{
+					System.out.println(“O depósito inicial não é válido para esse grau de Conta”);
+				}
+				statusConta = false;
+			}			
+		break;
+		case 2:
+			if(limiteConta >= 0 && depositoInicial >= 500)
+			{
+				statusConta = true;
+			}
+			else
+			{
+				if(limiteConta < 0)
+				{
+					if(depositoInicial < 500)
+					{
+						 System.out.println(“O limite da Conta e o depósito inicial não são válidos para esse grau de Conta”);
+					}
+					else if(depositoInicial >= 500)
+					{
+						System.out.println(“O limite da Conta não é válido para esse grau de Conta”);
+					}
+				}
+				else if(depositoInicial < 500)
+				{
+					System.out.println(“O depósito inicial não é válido para esse grau de Conta”);
+				}
+				statusConta = false;
+			}	
+		break;
+		case 3:
+			if(limiteConta >= 0 && depositoInicial >= 1000)
+			{
+				statusConta = true;
+			}
+			else
+			{
+				if(limiteConta < 0)
+				{
+					if(depositoInicial < 1000)
+					{
+						 System.out.println(“O limite da Conta e o depósito inicial não são válidos para esse grau de Conta”);
+					}
+					else if(depositoInicial >= 1000)
+					{
+						System.out.println(“O limite da Conta não é válido para esse grau de Conta”);
+					}
+				}
+				else if(depositoInicial < 1000)
+				{
+					System.out.println(“O depósito inicial não é válido para esse grau de Conta”);
+				}
+				statusConta = false;
+			}
+		break;
+	}
+	this.saldo+= depositoInicial;
+	
+}
