@@ -1,4 +1,3 @@
-
 /**
  * 
  */
@@ -9,12 +8,12 @@ public class Professor
     // variáveis de instância
     private String nome;
     private String depto;
-    private Date dataAdmissao;
+    private Calendar dataAdmissao;
 
     /**
      * Construtor para objetos da classe Universidade
      */
-    public Professor(String nome, String depto, String dataAdmissao)
+    public Professor(String nome, String depto, Calendar dataAdmissao)
     {
         // inicializa variáveis de instância
         this.nome = nome;
@@ -26,5 +25,22 @@ public class Professor
         // inicializa variáveis de instância
         this.nome = nome;
         this.depto = depto;
-        Date data = new Date() ;
+        this.dataAdmissao = Calendar.getInstance();
     }
+     public Professor(String nome, int depto)
+    {
+        // inicializa variáveis de instância
+        this.nome = nome;
+        if(depto == 1)
+            this.depto = "Depto C.C.";
+        else if(depto == 2)
+            this.depto = "Depto Mat";
+        else if(depto == 3)
+            this.depto = "Depto Estatística";
+        else
+            this.depto = "depto desconhecido";
+        this.dataAdmissao = Calendar.getInstance();
+    }
+
+   
+}
