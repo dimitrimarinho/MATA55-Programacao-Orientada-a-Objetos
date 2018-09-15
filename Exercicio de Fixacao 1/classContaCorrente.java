@@ -3,7 +3,8 @@ import java.lang.Character.*;
 import java.lang.String.*;
 public class ContaCorrente
 {
-    private int numeroConta, digitosVerificadores,numeroAgencia, grauConta, saldo, limiteConta, numDigitos;
+    private int numeroConta, digitosVerificadores,numeroAgencia, grauConta;
+    private double saldo, limiteConta;
     private boolean statusConta;
 
     public ContaCorrente(int numeroConta, int numeroAgencia, int grauConta, int limiteConta, int depositoInicial)
@@ -26,16 +27,16 @@ public class ContaCorrente
                         {
                             if(depositoInicial <= 100)
                             {
-                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta");
+                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta.");
                             }
                             else if(depositoInicial > 100)
                             {
-                                System.out.println("O limite da Conta não é válido para esse grau de Conta");
+                                System.out.println("O limite da Conta não é válido para esse grau de Conta.");
                             }
                         }
                         else if(depositoInicial <= 100)
                         {
-                            System.out.println("O depósito inicial não é válido para esse grau de Conta");
+                            System.out.println("O depósito inicial não é válido para esse grau de Conta.");
                         }
                         statusConta = false;
                     }
@@ -51,16 +52,16 @@ public class ContaCorrente
                         {
                             if(depositoInicial < 200)
                             {
-                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta");
+                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta.");
                             }
                             else if(depositoInicial >= 200)
                             {
-                                System.out.println("O limite da Conta não é válido para esse grau de Conta");
+                                System.out.println("O limite da Conta não é válido para esse grau de Conta.");
                             }
                         }
                         else if(depositoInicial < 200)
                         {
-                            System.out.println("O depósito inicial não é válido para esse grau de Conta");
+                            System.out.println("O depósito inicial não é válido para esse grau de Conta.");
                         }
                         statusConta = false;
                     }
@@ -76,16 +77,16 @@ public class ContaCorrente
                         {
                             if(depositoInicial < 500)
                             {
-                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta");
+                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta.");
                             }
                             else if(depositoInicial >= 500)
                             {
-                                System.out.println("O limite da Conta não é válido para esse grau de Conta");
+                                System.out.println("O limite da Conta não é válido para esse grau de Conta.");
                             }
                         }
                         else if(depositoInicial < 500)
                         {
-                            System.out.println("O depósito inicial não é válido para esse grau de Conta");
+                            System.out.println("O depósito inicial não é válido para esse grau de Conta.");
                         }
                         statusConta = false;
                     }
@@ -101,16 +102,16 @@ public class ContaCorrente
                         {
                             if(depositoInicial < 1000)
                             {
-                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta");
+                                 System.out.println("O limite da Conta e o depósito inicial não são válidos para esse grau de Conta.");
                             }
                             else if(depositoInicial >= 1000)
                             {
-                                System.out.println("O limite da Conta não é válido para esse grau de Conta");
+                                System.out.println("O limite da Conta não é válido para esse grau de Conta.");
                             }
                         }
                         else if(depositoInicial < 1000)
                         {
-                            System.out.println("O depósito inicial não é válido para esse grau de Conta");
+                            System.out.println("O depósito inicial não é válido para esse grau de Conta.");
                         }
                         statusConta = false;
                     }
@@ -161,5 +162,119 @@ public class ContaCorrente
         varCalc2digi = Integer.toString(calc2digi);
       }
       return calc2digi;
+    }
+    boolean lancOp(double valorOp, char tipoOp)
+    {
+      boolean bool = false;
+      switch(tipoOp)
+      {
+        case 'C':
+          this.saldo += valorOp;
+          bool = true;
+        break;
+        case 'D':
+          if((saldo - valorOp) >= (-limiteConta))
+          {
+            this.saldo = saldo - valorOp;
+            bool = true;
+          }
+          else
+          {
+            System.out.println(" Erro ! Esta operação é inválida. O débito ultrapassa o limite da conta.");
+            bool = false;
+          }
+        break;
+        default:
+          System.out.println(" Erro ! Esta operação é inválida. Digite um código de operação válido.");
+          bool = false;
+        break;
+      }
+      return bool;
+    }
+    void setLimite(double novoLimite)       // Testar função
+    {
+      if(grauConta != 0)
+      {
+        if(novoLimite >= 0)
+        {
+          if(this.saldo >= (- novoLimite))
+          {
+            limiteConta = novoLimite;
+          }
+          else
+          {
+            System.out.println(" Erro ! Esta operação é inválida. O saldo atual deve estar dentro do novo limite estabelecido.");
+          }
+        }
+        else
+        {
+          System.out.println(" Erro ! Esta operação é inválida. O novo limite deve ser positivo.");
+        }
+      }
+      else
+      {
+        System.out.println(" Erro ! Esta operação é inválida. Contas com Grau 0 devem ter limite zero.");
+      }
+    }
+    void setGrau(int novoGrau)
+    {
+      switch(novoGrau)
+      {
+        case 0:
+          if(this.saldo >= 0)
+          {
+            this.grauConta = 0;
+            limiteConta = 0;
+          }
+          else
+          {
+            System.out.println(" Erro ! Esta operação é inválida. O saldo está abaixo do limite da Conta de grau 0");
+          }
+        break;
+        case 1:
+          this.grauConta = novoGrau;
+        break;
+        case 2:
+          this.grauConta = novoGrau;
+        break;
+        case 3:
+          this.grauConta = novoGrau;
+        break;
+        default:
+          System.out.println(" Erro ! Esta operação é inválida. Insira um grau de conta válido: 0 a 3.");
+        break;
+      }
+    }
+    int getNumConta()
+    {
+      return this.numeroConta;
+    }
+    int getNumAgencia()
+    {
+      return this.numeroAgencia;
+    }
+    int getDigVer1()
+    {
+      return calc1DigV;
+    }
+    int getDigVer2()
+    {
+      return calc2DigV;
+    }
+    int getGrau()
+    {
+      return this.grauConta;
+    }
+    double getSaldo()
+    {
+      return this.saldo;
+    }
+    double getLimite()
+    {
+      return this.limiteConta;
+    }
+    boolean isAtiva()
+    {
+      return this.statusConta;
     }
 }
