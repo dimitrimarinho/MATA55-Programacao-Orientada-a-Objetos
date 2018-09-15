@@ -1,7 +1,8 @@
+import java.lang.Math;
 public class ContaCorrente
 {
-    private int numeroConta, digitosVerificadores,numeroAgencia, grauConta, saldo, limiteConta;
-    private boolean statusConta;    
+    private int numeroConta, digitosVerificadores,numeroAgencia, grauConta, saldo, limiteConta, numDigitos;
+    private boolean statusConta;
 
     public ContaCorrente(int numeroConta, int numeroAgencia, int grauConta, int limiteConta, int depositoInicial)
         {
@@ -60,7 +61,7 @@ public class ContaCorrente
                             System.out.println("O depósito inicial não é válido para esse grau de Conta");
                         }
                         statusConta = false;
-                    }           
+                    }
                 break;
                 case 2:
                     if(limiteConta >= 0 && depositoInicial >= 500)
@@ -85,7 +86,7 @@ public class ContaCorrente
                             System.out.println("O depósito inicial não é válido para esse grau de Conta");
                         }
                         statusConta = false;
-                    }   
+                    }
                 break;
                 case 3:
                     if(limiteConta >= 0 && depositoInicial >= 1000)
@@ -114,6 +115,42 @@ public class ContaCorrente
                 break;
             }
         this.saldo+= depositoInicial;
-        
+
+    }
+    /* Método que calcula quantos dígitos tem o número da Conta */
+    int digitosNumeroConta()
+    {
+        int var = numeroConta;
+        while(var != 0)
+        {
+          var = var/10;
+          numDigitos++;
+        }
+        return numDigitos;
+    }
+    int calc1DigV()
+    {
+      double var = Math.pow(10, numDigitos);
+      int primeiroVerificador = 0, contador = 1, varNumConta = numeroConta;
+      while(var != 1)
+      {
+        var = var/10;
+        primeiroVerificador += (varNumConta/var)*contador;
+        contador++;
+        varNumConta-= (numeroConta/var)*var;
+      }
+      return primeiroVerificador;
+    }
+    int calc2DigV()
+    {
+      double var = 10;
+      int segundoVerificador = 0, contador = 1;
+      while(var != 0)
+      {
+        segundoVerificador += (numeroConta%var)*contador;
+        contador++;
+        var = Math.pow(10, contador);
+      }
+      return segundoVerificador;
     }
 }
