@@ -1,4 +1,6 @@
 import java.lang.Math;
+import java.lang.Character.*;
+import java.lang.String.*;
 public class ContaCorrente
 {
     private int numeroConta, digitosVerificadores,numeroAgencia, grauConta, saldo, limiteConta, numDigitos;
@@ -117,40 +119,47 @@ public class ContaCorrente
         this.saldo+= depositoInicial;
 
     }
-    /* Método que calcula quantos dígitos tem o número da Conta */
-    int digitosNumeroConta()
-    {
-        int var = numeroConta;
-        while(var != 0)
-        {
-          var = var/10;
-          numDigitos++;
-        }
-        return numDigitos;
-    }
     int calc1DigV()
     {
-      double var = Math.pow(10, numDigitos);
-      int primeiroVerificador = 0, contador = 1, varNumConta = numeroConta;
-      while(var != 1)
-      {
-        var = var/10;
-        primeiroVerificador += (varNumConta/var)*contador;
-        contador++;
-        varNumConta-= (numeroConta/var)*var;
+      int cont = 0, contCasa = 0, calc1digi = 0;
+      String varNumConta = Integer.toString(numeroConta);
+      while(cont != varNumConta.length()){
+        cont++;
+        calc1digi+= (Character.getNumericValue(varNumConta.charAt(contCasa)))*cont;
+        // System.out.println("\n"); // Debug
+        // System.out.printf("while1 calc1digi é %d", calc1digi); // Debug
+        contCasa++;
       }
-      return primeiroVerificador;
+      String varCalc1digi = Integer.toString(calc1digi);
+      while(varCalc1digi.length() != 1)
+      {
+        calc1digi = (Integer.parseInt(varCalc1digi)) - 9;
+        // System.out.println("\n"); // Debug
+        // System.out.printf("while2 calc1digi é %d", calc1digi); // Debug
+        varCalc1digi = Integer.toString(calc1digi);
+      }
+      return calc1digi;
     }
     int calc2DigV()
     {
-      double var = 10;
-      int segundoVerificador = 0, contador = 1;
-      while(var != 0)
-      {
-        segundoVerificador += (numeroConta%var)*contador;
-        contador++;
-        var = Math.pow(10, contador);
+      int contCasa = 0, calc2digi = 0;
+      String varNumConta = Integer.toString(numeroConta);
+      int cont = varNumConta.length();
+      while(cont != 0){
+        calc2digi+= (Character.getNumericValue(varNumConta.charAt(contCasa)))*cont;
+        cont--;
+        // System.out.println("\n"); // Debug
+        // System.out.printf("while1 calc2digi é %d", calc2digi); // Debug
+        contCasa++;
       }
-      return segundoVerificador;
+      String varCalc2digi = Integer.toString(calc2digi);
+      while(varCalc2digi.length() != 1)
+      {
+        calc2digi = (Integer.parseInt(varCalc2digi)) - 9;
+        // System.out.println("\n"); // Debug
+        // System.out.printf("while2 calc2digi é %d", calc2digi); // Debug
+        varCalc2digi = Integer.toString(calc2digi);
+      }
+      return calc2digi;
     }
 }
