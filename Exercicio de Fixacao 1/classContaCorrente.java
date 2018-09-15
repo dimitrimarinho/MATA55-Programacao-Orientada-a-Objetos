@@ -3,7 +3,7 @@ import java.lang.Character.*;
 import java.lang.String.*;
 public class ContaCorrente
 {
-    private int numeroConta, digitosVerificadores,numeroAgencia, grauConta;
+    private int numeroConta, numeroAgencia, grauConta;
     private double saldo, limiteConta;
     private boolean statusConta;
 
@@ -255,11 +255,11 @@ public class ContaCorrente
     }
     int getDigVer1()
     {
-      return calc1DigV;
+      return calc1DigV();
     }
     int getDigVer2()
     {
-      return calc2DigV;
+      return calc2DigV();
     }
     int getGrau()
     {
