@@ -7,7 +7,7 @@ public class ContaCorrente
     private double saldo, limiteConta;
     private boolean statusConta;
 
-    public ContaCorrente(int numeroConta, int numeroAgencia, int grauConta, int limiteConta, int depositoInicial)
+    public ContaCorrente(int numeroConta, int numeroAgencia, int grauConta, double limiteConta, int depositoInicial)
         {
             this.numeroConta = numeroConta;
             this.numeroAgencia = numeroAgencia;
