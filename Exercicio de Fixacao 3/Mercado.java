@@ -6,7 +6,8 @@ public class Mercado{
         this.clientes = new ArrayList();
         this.itensParaVenda = new ArrayList();
     }
-    public void addCliente(){
+    public void addCliente(Cliente clientes){
+        
 
     }
     public void deleteCliente(){

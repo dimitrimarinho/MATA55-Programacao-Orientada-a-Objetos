@@ -4,4 +4,10 @@ public class Cliente{
         this.nomeCliente = nomeCliente;
         this.codigoCliente = codigoCliente;
     }
+    public void setCodigoCliente(String codigoCliente){
+    	this.codigoCliente = codigoCliente;
+    }
+    public String getCodigoCliente(){
+    	return this.codigoCliente;
+    }
 }
