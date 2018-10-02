@@ -1,6 +1,5 @@
 # MATA55 - Programação Orientada a Objetos
-
-Semestre: 2018.2
+**Semestre: 2018.2**
 
 Profª Drª Rita Suzana Maciel 
 
@@ -14,8 +13,8 @@ Monitor: Daniel David
 Avaliações Teóricas
 
           Avaliação 1  - Peso 1,0 (08/10)
-          Avaliação  2 - Peso 2,0 (03/12)
-          Avaliação Continuada (exercicios de fixação e incremental) Peso 1,0
+          Avaliação 2 - Peso 2,0 (03/12)
+          Avaliação Continuada (exercicios de fixação e incremental) - Peso 1,0
           Trabalho em Dupla - Peso 1,0 
 
 Aulas: 
