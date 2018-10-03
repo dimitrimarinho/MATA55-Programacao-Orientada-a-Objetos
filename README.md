@@ -6,6 +6,8 @@ Profª Drª Rita Suzana Maciel
           http://homes.dcc.ufba.br/~ritasuzana/
           http://lattes.cnpq.br/0290950513716961
 
+Estagiário Docente: João Werther
+
 Monitor: Daniel David 
 
           E-mail do monitor: dandavidf@gmail.com
