@@ -12,15 +12,15 @@ Monitor: Daniel David
 
 Avaliações Teóricas
 
-          Avaliação 1  - Peso 1,0 (08/10)
+          Avaliação 1 - Peso 1,0 (08/10)
           Avaliação 2 - Peso 2,0 (03/12)
           Avaliação Continuada (exercicios de fixação e incremental) - Peso 1,0
           Trabalho em Dupla - Peso 1,0 
 
 Aulas: 
 
-          Segunda-feira sala 214 PAF 1
-          Quarta-feira lab.144 - IME
+          Segunda-feira - Sala 214 do PAF 1
+          Quarta-feira - Laboratório 144 do IME
 
 Material de Estudo do Semestre 2018.1 com Frederico Durao: 
 
