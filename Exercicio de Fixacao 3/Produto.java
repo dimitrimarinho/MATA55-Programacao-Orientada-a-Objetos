@@ -6,5 +6,8 @@ public class Produto{
         this.nomeProduto = nomeProduto;
         this.codigoProduto = codigoProduto;
         this.precoUnitario = precoUnitario;
-    }    
+    }
+    public int getCodigoProduto(){
+        return this.codigoProduto;
+    }
 }

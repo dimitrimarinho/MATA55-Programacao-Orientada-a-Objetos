@@ -10,4 +10,11 @@ public class Cliente{
     public String getCodigoCliente(){
     	return this.codigoCliente;
     }
+    public void setNomeCliente(String nomeCliente){
+    	this.nomeCliente = nomeCliente;
+    }
+    public String getNomeCliente(){
+    	return this.nomeCliente;
+    }
+    
 }
