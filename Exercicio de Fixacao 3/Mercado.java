@@ -1,23 +1,20 @@
 import java.util.ArrayList;
 public class Mercado{
     private ArrayList<Cliente>clientes;
-    private ArrayList<ItemVenda>itensParaVenda;
+    private ArrayList<Produto>produtos;
     public Mercado(){
-        this.clientes = new ArrayList();
-        this.itensParaVenda = new ArrayList();
+        this.produtos = new ArrayList();
     }
     public void addCliente(Cliente clientes){
-        
-
+        Cliente.add(clientes);
     }
-    public void deleteCliente(){
-
+    public void deleteCliente(Cliente clientes){
+        Cliente.remove(clientes);
     }
-    public void addItensParaVenda(){
-
+    public void addProdutos(Produto produtos){
+        Produto.add(produtos);
     }
-    public void deleteItensParaVenda(){
-
+    public void deleteProdutos(Produto produtos){
+        Produto.remove(produtos);
     }
-
 }
