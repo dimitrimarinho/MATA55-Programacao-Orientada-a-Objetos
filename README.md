@@ -12,7 +12,7 @@ Monitor: Daniel David
 
 Avaliações Teóricas
 
-          Avaliação 1 - Peso 1,0 (08/10)
+          Avaliação 1 - Peso 1,0 (10/10) - No Laboratório 143
           Avaliação 2 - Peso 2,0 (03/12)
           Avaliação Continuada (exercicios de fixação e incremental) - Peso 1,0
           Trabalho em Dupla - Peso 1,0 
