@@ -3,13 +3,14 @@
 
 Profª Drª Rita Suzana Maciel 
 
-          http://homes.dcc.ufba.br/~ritasuzana/
-          http://lattes.cnpq.br/0290950513716961
+          Página pessoal (UFBA/DCC): http://homes.dcc.ufba.br/~ritasuzana/
+          Lattes: http://lattes.cnpq.br/0290950513716961
 
 Estagiário Docente: João Werther
 
 Monitor: Daniel David 
 
+          Lattes: http://lattes.cnpq.br/3673822222764970
           E-mail do monitor: dandavidf@gmail.com
 
 Avaliações Teóricas
