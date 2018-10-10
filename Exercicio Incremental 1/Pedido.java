@@ -9,7 +9,7 @@ public class Pedido{
               System.out.println("O pedido está aberto.");
           break;
       }
-     this.pedidoProduto = new Produto(codigo, tipo, nome, preco, disponibilidade); // erro de compilação
+     this.pedidoProduto = new Produto(codigo, tipo, nome, preco, disponibilidade); 
   }
   public Pedido(int numero, int status, int codigo, int tipo, String nome, double preco, boolean disponibilidade){
       this(numero, codigo, tipo, nome, preco, disponibilidade);
