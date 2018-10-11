@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Disciplina
+comment1.params=codigo\ nota
+comment1.target=Disciplina(java.lang.String,\ char)
+comment2.params=codigo
+comment2.target=void\ setCodigo(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getCodigo()
+comment4.params=nota
+comment4.target=void\ setNota(char)
+comment5.params=
+comment5.target=char\ getNota()
+numComments=6
