@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=circle
+comment1.params=raio
+comment1.target=circle(double)
+comment2.params=
+comment2.target=double\ area()
+comment3.params=
+comment3.target=double\ perimetro()
+comment4.params=
+comment4.target=double\ getRaio()
+comment5.params=raio
+comment5.target=void\ setRaio(double)
+numComments=6
