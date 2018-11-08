@@ -9,7 +9,7 @@ public class Pedido{
               System.out.println("O pedido está aberto.");
           break;
       }
-     this.pedidoProduto = new Produto(codigo, tipo, nome, preco, disponibilidade); 
+     this.pedidoProduto = new Produto(codigo, tipo, nome, preco, disponibilidade);
   }
   public Pedido(int numero, int status, int codigo, int tipo, String nome, double preco, boolean disponibilidade){
       this(numero, codigo, tipo, nome, preco, disponibilidade);
@@ -28,7 +28,7 @@ public class Pedido{
           break;
       }
   }
-  void servir(){
+  public void servir(){
       this.status = 1;
       switch(this.status){
           case 1:
@@ -36,7 +36,7 @@ public class Pedido{
           break;
       }
   }
-  void cancelar(){
+  public void cancelar(){
       this.status = 9;
       switch(this.status){
           case 9:
@@ -44,10 +44,10 @@ public class Pedido{
           break;
       }
   }
-  void setNumero(int numero){
+  public void setNumero(int numero){
     this.numero = numero;
   }
-  void setStatus(int status){
+  public void setStatus(int status){
     this.status = status;
     switch(this.status){
         case 0:
@@ -64,10 +64,10 @@ public class Pedido{
         break;
     }
   }
-  int getNumero(){
+  public int getNumero(){
     return this.numero;
   }
-  int getStatus(){
+  public int getStatus(){
         switch(this.status){
         case 0:
             System.out.println("O pedido está aberto.");

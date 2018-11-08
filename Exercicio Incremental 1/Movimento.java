@@ -19,10 +19,10 @@ public class Movimento{
             break;
         }
     }
-    void setMesa(int mesa){
+    public void setMesa(int mesa){
         this.mesa = mesa;
     }
-    void setStatus(int status){
+    public void setStatus(int status){
         this.status = status;
         switch(this.status){
             case 0:
@@ -38,7 +38,7 @@ public class Movimento{
                 System.out.println("Erro ! O status digitado é inválido.");
         }
     }
-    void setDataAbertura(){
+    public void setDataAbertura(){
         Calendar aDataAbertura = Calendar.getInstance();
         int hrs = aDataAbertura.get(Calendar.HOUR);
         int mnts = aDataAbertura.get(Calendar.MINUTE);
@@ -47,7 +47,7 @@ public class Movimento{
         System.out.println("Conta aberta às " + curTime + " do dia " + aDataAbertura.get(Calendar.DAY_OF_MONTH) + "/" + (aDataAbertura.get(Calendar.MONTH)+1) + "/" + aDataAbertura.get(Calendar.YEAR) + ".");
         this.dataAbertura = aDataAbertura;
     }
-    void setDataFechamento(){
+    public void setDataFechamento(){
         Calendar aDataFechamento = Calendar.getInstance();
         int hrs = aDataFechamento.get(Calendar.HOUR);
         int mnts = aDataFechamento.get(Calendar.MINUTE);
@@ -56,7 +56,7 @@ public class Movimento{
         System.out.println("Conta fechada às " + curTime + " do dia " + aDataFechamento.get(Calendar.DAY_OF_MONTH) + "/" + (aDataFechamento.get(Calendar.MONTH)+1) + "/" + aDataFechamento.get(Calendar.YEAR) + ".");
         this.dataFechamento = aDataFechamento;
     }
-    void fechar(){
+    public void fechar(){
         this.status = 9;
         switch(this.status){
             case 9:
@@ -71,7 +71,7 @@ public class Movimento{
         System.out.println("Conta fechada às " + curTime + " do dia " + aDataFechamento.get(Calendar.DAY_OF_MONTH) + "/" + (aDataFechamento.get(Calendar.MONTH)+1) + "/" + aDataFechamento.get(Calendar.YEAR) + ".");
         this.dataFechamento = aDataFechamento;
     }
-    void pagar(){
+    public void pagar(){
         this.status = 1;
         switch(this.status){
             case 1:
@@ -86,10 +86,10 @@ public class Movimento{
         System.out.println("Conta paga às " + curTime + " do dia " + aDataFechamento.get(Calendar.DAY_OF_MONTH) + "/" + (aDataFechamento.get(Calendar.MONTH)+1) + "/" + aDataFechamento.get(Calendar.YEAR) + ".");
         this.dataFechamento = aDataFechamento;
     }
-    int getMesa(){
+    public int getMesa(){
         return this.mesa;
     }
-    int getStatus(){
+    public int getStatus(){
         switch(this.status){
             case 0:
                 System.out.println("Conta em aberto.");
@@ -105,7 +105,7 @@ public class Movimento{
         }
         return this.status;
     }
-    Calendar getDataAbertura(){
+    public Calendar getDataAbertura(){
         int hrs = this.dataAbertura.get(Calendar.HOUR);
         int mnts = this.dataAbertura.get(Calendar.MINUTE);
         int segs = this.dataAbertura.get(Calendar.SECOND);
@@ -113,7 +113,7 @@ public class Movimento{
         System.out.println("A conta foi aberta às " + curTime + " do dia " + this.dataAbertura.get(Calendar.DAY_OF_MONTH) + "/" + (this.dataAbertura.get(Calendar.MONTH)+1) + "/" + this.dataAbertura.get(Calendar.YEAR) + ".");
         return this.dataAbertura;
     }
-    Calendar getDataFechamento(){
+    public Calendar getDataFechamento(){
         if(this.dataFechamento == null){
             System.out.println("A conta ainda não foi encerrada. Será retornado a data de abertura da conta.");
             return this.dataAbertura;

@@ -27,10 +27,10 @@ public class Produto{
     this.preco = preco;
     this.disponibilidade = disponibilidade;
   }
-  void setCodigo(int codigo){
+  public void setCodigo(int codigo){
     this.codigo = codigo;
   }
-  void setTipo(int tipo){
+  public void setTipo(int tipo){
     this.tipo = tipo;
     switch(this.tipo){
         case 0:
@@ -47,13 +47,13 @@ public class Produto{
         break;
     }
   }
-  void setNome(String nome){
+  public void setNome(String nome){
     this.nome = nome;
   }
-  void setPreco(double preco){
+  public void setPreco(double preco){
     this.preco = preco;
   }
-  void setDisponibilidade(boolean disponibilidade){
+  public void setDisponibilidade(boolean disponibilidade){
     this.disponibilidade = disponibilidade;
     if(this.disponibilidade == false){
         System.out.println("Produto indisponível.");
@@ -62,10 +62,10 @@ public class Produto{
         System.out.println("Produto disponível.");
     }
   }
-  int getCodigo(){
+  public int getCodigo(){
     return this.codigo;
   }
-  int getTipo(){
+  public int getTipo(){
       switch(this.tipo){
           case 0:
               System.out.println("Este tipo refere-se a bar.");
@@ -82,13 +82,13 @@ public class Produto{
     }
     return this.tipo;
   }
-  String getNome(){
+  public String getNome(){
     return this.nome;
   }
-  double getPreco(){
+  public double getPreco(){
     return this.preco;
   }
-  boolean getDisponibilidade(){
+  public boolean getDisponibilidade(){
     if(this.disponibilidade == false){
         System.out.println("Produto indisponível.");
     }
