@@ -42,4 +42,20 @@ public class Aplicacao{
             System.out.println("O valor do emprestimo e: " + pessoa.valorEmprestimo());       
         }
  }
+public static double calculaEmprestimo(Pessoa p){
+        double emprestimo = 1000.0;
+        if(p instanceof ChefeDepartamento){
+            ChefeDepartamento aux = (ChefeDepartamento) p;
+            emprestimo = 3* aux.qualSalario();
+        }
+        else if(p instanceof Funcionario){
+            Funcionario aux = (Funcionario) p;
+            emprestimo = 2 * aux.qualSalario();
+        }
+        else if(p instanceof FuncionarioPublico){
+            FuncionarioPublico aux = (FuncionarioPublico) p;
+            emprestimo = 1.5 * aux.qualSalario();
+        }
+        return emprestimo;
+  }
 }
