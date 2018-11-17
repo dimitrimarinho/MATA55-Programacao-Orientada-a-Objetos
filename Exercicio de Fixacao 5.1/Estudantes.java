@@ -21,6 +21,4 @@ public class Estudantes extends Pessoas {
 	public void setNomeEscola(String nomeEscola) {
 		this.nomeEscola = nomeEscola;
 	}
-	
 }
- 	
