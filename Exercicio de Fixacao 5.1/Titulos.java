@@ -1,4 +1,3 @@
-package Livraria;
 public class Titulos {
 	private String nome, editora;
 	private double preco;

@@ -1,4 +1,3 @@
-package Livraria;
 public class LivrosDidaticos extends Livros {
 	private String area;
 	public LivrosDidaticos(String nome, String editora, double preco, String autorPrincipal, String resumo,

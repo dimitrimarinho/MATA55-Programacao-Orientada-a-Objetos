@@ -1,12 +1,11 @@
-public class Estudantes_Internacionais extends Pessoas {
+public class Estudantes_Internacionais extends Estudantes {
 	private String paisOrigem, nomeEscola;
 	private int serie;
 	public Estudantes_Internacionais(String nome, String endereco, String nomeEscola, int serie, String paisOrigem) {
-		super(nome, endereco);
-		this.nomeEscola = nomeEscola;
-		this.serie = serie;
+		super(nome, endereco, nomeEscola, serie);
 		this.paisOrigem = paisOrigem;
 	}
+	@Override
 	public String toString() {
 		return super.toString() + "\nNome da Escola: " + nomeEscola + "\nSérie: " + serie + "\nPaís de Origem: " + paisOrigem;
 	}
@@ -15,17 +14,5 @@ public class Estudantes_Internacionais extends Pessoas {
 	}
 	public void setPaisOrigem(String paisOrigem) {
 		this.paisOrigem = paisOrigem;
-	}
-	public String getNomeEscola() {
-		return nomeEscola;
-	}
-	public void setNomeEscola(String nomeEscola) {
-		this.nomeEscola = nomeEscola;
-	}
-	public int getSerie() {
-		return serie;
-	}
-	public void setSerie(int serie) {
-		this.serie = serie;
 	}
 }

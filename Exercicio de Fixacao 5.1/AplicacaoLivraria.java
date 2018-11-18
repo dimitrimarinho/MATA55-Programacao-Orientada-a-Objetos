@@ -1,4 +1,3 @@
-package Livraria;
 import java.util.ArrayList;
 public class AplicacaoLivraria {
 	public String nomeLivraria;
@@ -62,5 +61,26 @@ public class AplicacaoLivraria {
 	}
 	public void setLivrosDidativos(ArrayList<LivrosDidaticos> livrosDidativos) {
 		this.livrosDidativos = livrosDidativos;
-	}	
+	}
+	public void comprarTitulo(Titulos objetoVendido, int quantidade){
+		System.out.println("Nome da Livraria: " + this.nomeLivraria);
+		if(objetoVendido instanceof LivrosDidaticos){
+			LivrosDidaticos aux = (LivrosDidaticos) objetoVendido;
+			System.out.println("Livro Didático vendido: " + aux.getNome());
+			System.out.println("Quantidade: " + quantidade);
+			System.out.println("Preco total: " + quantidade * (aux.getPreco() * 0.90));
+		}
+		else if(objetoVendido instanceof Livros){
+			Livros aux = (Livros) objetoVendido;
+			System.out.println("Livro vendido: " + aux.getNome());
+			System.out.println("Quantidade: " + quantidade);
+			System.out.println("Preco total: " + quantidade * (aux.getPreco() * 0.97));
+		}
+		else if(objetoVendido instanceof Revistas){
+			Revistas aux = (Revistas) objetoVendido;
+			System.out.println("Revista vendida: " + aux.getNome());
+			System.out.println("Quantidade: " + quantidade);
+			System.out.println("Preco total: " + quantidade * (aux.getPreco() * 0.98));
+		}
+	}
 }

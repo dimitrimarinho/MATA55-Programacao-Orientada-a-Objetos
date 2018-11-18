@@ -1,4 +1,3 @@
-package Livraria;
 public class Revistas extends Titulos {
 	private String periodicidade;
 	public Revistas(String nome, String editora, double preco, String periodicidade) {
