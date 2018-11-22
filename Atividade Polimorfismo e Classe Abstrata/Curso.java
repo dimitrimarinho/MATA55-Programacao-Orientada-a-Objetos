@@ -1,13 +1,14 @@
-package faculdade;
+   
 public abstract class Curso {
 	private String codigo, nome, area;
 	private int vagas;			 
-	private double taxa;    	// taxa := taxa de matrícula
-	public Curso(String codigo, String nome, String area, int vagas) {	
+	private double taxa;    	
+	public Curso(String codigo, String nome, String area, int vagas, double taxa) {	
 		this.codigo = codigo;
 		this.nome = nome;
 		this.area = area;
 		this.vagas = vagas;
+		this.taxa = taxa;
 	}
 	public String toString() {
 		return "\nNome do curso: " + this.nome + "\nCódigo do curso: " + this.codigo + "\nÁrea: " + this.area + "\nQuantidade de Vagas: " + this.vagas;
