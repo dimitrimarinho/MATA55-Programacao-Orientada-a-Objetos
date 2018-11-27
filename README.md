@@ -5,7 +5,8 @@ Profª Drª Rita Suzana Maciel
 
           Página pessoal (UFBA/DCC): http://homes.dcc.ufba.br/~ritasuzana/
           Lattes: http://lattes.cnpq.br/0290950513716961
-
+          E-mail da professora: ritasuzana@dcc.ufba.br 
+          
 Estagiário Docente: João Werther
 
 Monitor: Daniel David 
