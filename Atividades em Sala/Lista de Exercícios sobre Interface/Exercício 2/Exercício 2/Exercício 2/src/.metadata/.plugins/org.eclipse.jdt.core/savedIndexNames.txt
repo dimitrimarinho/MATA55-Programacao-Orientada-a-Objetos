@@ -1,0 +1,1 @@
+INDEX VERSION 1.130+/tmp/guest-umiqkj/Documentos/MATA55-Programacao-Orientada-a-Objetos/Atividades em Sala/Lista de Exercícios sobre Interface/Exercício 2/Exercício 2/src/.metadata/.plugins/org.eclipse.jdt.core
