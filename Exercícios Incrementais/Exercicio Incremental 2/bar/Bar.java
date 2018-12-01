@@ -2,9 +2,13 @@ package bar;
 import java.util.ArrayList;
 import java.util.Iterator;
 public class Bar {
-	private static ArrayList<Movimento> movimento = new ArrayList<Movimento>(); ;
-	private static ArrayList<Produto> produtos = new ArrayList<Produto>();
+	private static ArrayList<Movimento> movimento; 
+	private static ArrayList<Produto> produtos; 
+	private static ArrayList<FormaDePagamento> pagamentos; 
 	public Bar(){
+		movimento = new ArrayList<Movimento>();
+		produtos = new ArrayList<Produto>();
+		pagamentos = new ArrayList<FormaDePagamento>();
 	}
 	public static ArrayList<Movimento> getMovimento() {
 		return movimento;
@@ -74,5 +78,53 @@ public class Bar {
 		}
 		System.out.println("Não foi encontrado produto com o código indicado");
 		return false;
+	}
+	public void relatorioMovimentacao(){
+		for(Iterator<Movimento> it = movimento.iterator(); it.hasNext();) {
+			Movimento m = (Movimento) it.next();
+	    	System.out.print("\nNome do Cliente: " + m.getClientes().get(0).getNome() + "\nID do Cliente: " + m.getClientes().get(0).getID() + "\nTipo do Cliente: " + m.getClientes().get(0).getTipo() + "\nCategoria do Cliente: " + m.getClientes().get(0).getCategoria() + "\nData da Abertura da Movimento: " + m.stringGetDataAbertura() + "\nData de Fechamento do Movimento: " + m.stringGetDataFechamento() + "\n\n");
+		}
+	}   
+	public static void adicionarPagamento(FormaDePagamento novoPagamento) {
+		pagamentos.add(novoPagamento);
+	}
+	public static boolean removerPagamento(int idPagamento) {
+		for(Iterator<FormaDePagamento> it = pagamentos.iterator(); it.hasNext();) {
+			FormaDePagamento p = (FormaDePagamento) it.next();
+			if(p.getId() == idPagamento) {
+				pagamentos.remove(p);
+				System.out.println("Pagamento encontrado e removido");
+				return true;
+			}
+		}
+		System.out.println("Não foi encontrado pagamento com o ID indicado");
+		return false;
+	}
+	public static void listaFormasPagamento(){
+		for(Iterator<FormaDePagamento> it = pagamentos.iterator(); it.hasNext();) {
+			FormaDePagamento p = (FormaDePagamento) it.next();
+			System.out.println("\nID do Pagamento: " + p.getId() + "\nNome: " + p.getNome());
+			if(p.isAtivo() == true) 
+				System.out.println("Pagamento Ativo ? Sim");
+			else
+				System.out.println("Pagamento Ativo ? Não");
+			if (p instanceof Credito) {
+				Credito aux = (Credito) p;
+				System.out.print("Taxa de Retenção (em R$): " + aux.getTaxaRetencao() + "\nPrazo (em meses): " + aux.getPrazoPagamento());
+			}
+			else if (p instanceof Debito) {
+				Debito aux = (Debito) p;
+				System.out.print("Taxa de Retenção (em R$): " + aux.getTaxaRetencao() + "\nConta Corrente: " + aux.getContaCorrente());
+			}
+			else if (p instanceof Voucher) {
+				Voucher aux = (Voucher) p;
+				System.out.print("Diária (em R$): " + aux.getDiaria() + "\nPrazo (em meses): " + aux.getPrazoPagamento() + "\nConta Corrente: " + aux.getContaCorrente());
+			}
+			else if (p instanceof Dinheiro) {
+				Dinheiro aux = (Dinheiro) p;
+				System.out.print("Forma de pagamento: " + aux.getForma());
+			}
+			System.out.println();
+		}
 	}
 }

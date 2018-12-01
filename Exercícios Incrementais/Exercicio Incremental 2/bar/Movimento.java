@@ -36,6 +36,10 @@ public class Movimento{
         System.out.println("A conta foi aberta às " + curTime + " do dia " + this.dataAbertura.get(Calendar.DAY_OF_MONTH) + "/" + (this.dataAbertura.get(Calendar.MONTH)+1) + "/" + this.dataAbertura.get(Calendar.YEAR));
         return this.dataAbertura;
     }
+    public String stringGetDataAbertura(){
+        String curTime = configuraCurTime(this.dataAbertura);
+        return("A conta foi aberta às " + curTime + " do dia " + this.dataAbertura.get(Calendar.DAY_OF_MONTH) + "/" + (this.dataAbertura.get(Calendar.MONTH)+1) + "/" + this.dataAbertura.get(Calendar.YEAR));
+    }
     public void setDataAbertura(){
         Calendar aDataAbertura = Calendar.getInstance();
         String curTime = configuraCurTime(aDataAbertura);
@@ -51,6 +55,15 @@ public class Movimento{
             String curTime = configuraCurTime(this.dataFechamento);
             System.out.println("A conta foi fechada às " + curTime + " do dia " + this.dataFechamento.get(Calendar.DAY_OF_MONTH) + "/" + (this.dataFechamento.get(Calendar.MONTH)+1) + "/" + this.dataFechamento.get(Calendar.YEAR));
             return this.dataFechamento;
+        }
+    }
+    public String stringGetDataFechamento(){
+        if(this.dataFechamento == null){
+            return("A conta ainda não foi encerrada.");
+        }
+        else{
+            String curTime = configuraCurTime(this.dataFechamento);
+            return("\nA conta foi fechada às " + curTime + " do dia " + this.dataFechamento.get(Calendar.DAY_OF_MONTH) + "/" + (this.dataFechamento.get(Calendar.MONTH)+1) + "/" + this.dataFechamento.get(Calendar.YEAR));
         }
     }
     public void setDataFechamento(){
@@ -123,14 +136,14 @@ public class Movimento{
                 System.out.println("Erro ! O status digitado é inválido");
         }
     }
+	// public String relatorioMovimentacao(Movimento movimento){
+    //	return "\nNome do Cliente: " + movimento.getClientes().get(0).getNome() + "\nID do Cliente: " + movimento.getClientes().get(0).getID() + "\nTipo do Cliente: " + movimento.getClientes().get(0).getTipo() + "\nCategoria do Cliente: " + movimento.getClientes().get(0).getCategoria() + "\nData da Abertura da Movimento: " + movimento.getDataAbertura() + "\nData de Fechamento do Movimento: " + movimento.getDataFechamento() + "\n\n";
+	//}   
     public String configuraCurTime(Calendar aData){
         int hrs = aData.get(Calendar.HOUR);
         int mnts = aData.get(Calendar.MINUTE);
         int segs = aData.get(Calendar.SECOND);
         String curTime = String.format("%02d:%02d:%02d", hrs, mnts, segs);
         return curTime;
-    }
-    public String relatorioMovimentacao(Movimento movimento){
-        	return "\nNome do Cliente: " + movimento.getClientes().get(0).getNome() + "\nID do Cliente: " + movimento.getClientes().get(0).getID() + "\nTipo do Cliente: " + movimento.getClientes().get(0).getTipo() + "\nCategoria do Cliente: " + movimento.getClientes().get(0).getCategoria() + "\nData da Abertura da Movimento: " + movimento.getDataAbertura() + "\nData de Fechamento do Movimento: " + movimento.getDataFechamento() + "\n\n";
-    }   
+    }    
 }
