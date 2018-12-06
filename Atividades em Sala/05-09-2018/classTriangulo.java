@@ -1,3 +1,4 @@
+/*
 Slide: POO com Java
 (página 27 de 33)
 https://www.moodle.ufba.br/pluginfile.php/579183/mod_resource/content/1/MATA55_IntroducaoPOOJava2017.pdf
@@ -9,15 +10,14 @@ Atributos: lado1, lado2, lado3
 Métodos: éEquilatero()
 
 Código no BlueJ: Triangulo.class
-
-
-
+*/
 /**
  * Exercício:   Criar uma classe triângulo
  * 
  * Atributos: lado1, lado2, lado3 
  * Método: isEquilateral
  */
+ 
 public class Triangulo
 {
     // Variáveis de instância
