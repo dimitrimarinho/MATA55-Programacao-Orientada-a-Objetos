@@ -33,9 +33,6 @@ public class Triangulo
         this.lado3 = newLado3;
     }
 
-    /**
-     * 
-     */
     public boolean isEquilateral()
     {
         if (lado1 == lado2 && lado1 == lado3)
