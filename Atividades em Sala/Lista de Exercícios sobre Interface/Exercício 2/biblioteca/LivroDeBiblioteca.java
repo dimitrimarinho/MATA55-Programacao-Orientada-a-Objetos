@@ -17,15 +17,12 @@ public class LivroDeBiblioteca extends Livro implements ItemDeBiblioteca {
 	}
 
 	// --------------- Implementando Interface ItemDeBiblioteca ----------------
-	@Override
 	public void empresta() {
 		setEmprestado(true);
 	}
-	@Override
 	public void devolve() {
 		setEmprestado(false);
 	}
-	@Override
 	public String descricao() {
 		return toString();
 	}
