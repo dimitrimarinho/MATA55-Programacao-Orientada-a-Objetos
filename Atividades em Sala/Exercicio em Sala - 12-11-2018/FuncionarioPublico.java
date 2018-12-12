@@ -4,6 +4,7 @@ public class FuncionarioPublico extends Funcionario{
         super(nome, salario);
         this.orgao = orgao;
     }
+    @Override
     public String toString(){
         return super.toString() + "\nOrgao: " + orgao;
     }
