@@ -4,6 +4,7 @@ public class ChefeDepartamento extends Funcionario{
         super(nome, salario);
         this.depto = depto;
     }
+    @Override
     public String toString(){
         return super.toString() + "\nDepartamento: " + depto;
     }
