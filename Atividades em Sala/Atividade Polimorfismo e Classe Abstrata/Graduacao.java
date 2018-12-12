@@ -6,6 +6,7 @@ public class Graduacao extends Curso {
 		this.discObrig = discObrig;
 		this.discOpta = discOpta;		
 	}
+	@Override
 	public String toString() {
 		return super.toString() + "\nNúmero de Disciplinas Obrigatórias: " + this.discObrig + "\nNúmero de Disciplinas Optativas: " + this.discOpta;
 	}

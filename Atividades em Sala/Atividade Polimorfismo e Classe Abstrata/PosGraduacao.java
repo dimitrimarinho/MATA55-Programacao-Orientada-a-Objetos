@@ -5,6 +5,7 @@ public class PosGraduacao extends Curso {
 		super(codigo, nome, area, vagas, taxa);
 		this.maxCargaHoraria = maxCargaHoraria;
 	}
+	@Override
 	public String toString() {
 		return super.toString() + "\nCarga Horária Máxima";
 	}
