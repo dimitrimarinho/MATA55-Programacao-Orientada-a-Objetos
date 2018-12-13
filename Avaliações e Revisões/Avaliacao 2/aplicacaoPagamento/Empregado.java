@@ -1,11 +1,16 @@
 package aplicacaoPagamento;
 
+/* Não foi empregado a classe abstrata, pois como o enunciado diz que o salarioLiquido
+da classe Empregado difere do Operador e do Engenheiro, concluiu-se que há empregados
+que não são Operadores e nem Engenheiros. Houve uma ambiguidade quando foi dito que somente
+os Operadores e Engenheiros possuíam atributos adicionais, podia-se entender que haviam outros empregados
+e que estes não tinham atributos adicionais */
 public class Empregado implements Pagamento {
-	
+
 	private String nome, CPF, matricula, cargo, numeroConta;
 	private double salarioBase;
 	private int tempoServico, codigoBanco, agencia;
-	
+
 	public Empregado(String nome, String CPF, String matricula, String cargo, String numeroConta, double salarioBase,
 			int tempoServico, int codigoBanco, int agencia) {
 		this.nome = nome;
@@ -24,12 +29,12 @@ public class Empregado implements Pagamento {
 		double salarioLiquido = ( 0.80 * getSalarioBase() + adicionalTempo );
 		return salarioLiquido;
 	}
-	
+
 	@Override
 	public String informarPagamento() {
 		return "O empregado " + getNome() + " recebeu o salário líquido de R$ " + salarioLiquido() + "\n";
 	}
-		
+
 	public String getNome() {
 		return nome;
 	}
@@ -101,5 +106,5 @@ public class Empregado implements Pagamento {
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
 	}
-		
+
 }
